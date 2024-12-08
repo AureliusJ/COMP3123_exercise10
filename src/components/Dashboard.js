@@ -9,10 +9,13 @@ const Dashboard = () => {
   if (!user) return <p>Please log in to view the dashboard.</p>;
 
   return (
-    <div>
-      <h2>Welcome, {user.name}!</h2>
-      <button onClick={() => dispatch(logout())}>Logout</button>
-    </div>
+    <div className="container dashboard">
+  <h2>Welcome, {user.name}!</h2>
+  <button className="logout-button" onClick={() => dispatch(logout())}>
+    Logout
+  </button>
+</div>
+
   );
 };
 
